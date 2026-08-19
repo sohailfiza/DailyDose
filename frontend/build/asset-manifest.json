@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7a62355.css",
+    "main.js": "/static/js/main.daa3d320.js",
+    "static/media/profilepic.png": "/static/media/profilepic.78394485e3a31c374f7a.png",
+    "static/media/error.png": "/static/media/error.4d8957088ce1e9c20e88.png",
+    "static/media/error404.png": "/static/media/error404.0f079f7a95d55c238b19.png",
+    "static/media/login-bg.png": "/static/media/login-bg.0082e3f89fb7bd2ad5a4.png",
+    "static/media/Caretacker.png": "/static/media/Caretacker.bb11c8032f1687bafc7d.png",
+    "static/media/User.png": "/static/media/User.68c81a654183372ad83b.png",
+    "static/media/UserCrop.png": "/static/media/UserCrop.c472e783f65f3985bbc7.png",
+    "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.1c701c9a6b587802e3d0.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/static/media/Poppins-SemiBold.5981b450a68d5134225b.ttf",
+    "static/media/logo.png": "/static/media/logo.fd7f5ac69d272fc49c6f.png",
+    "static/media/register-m2.png": "/static/media/register-m2.5f449f02457ddf7f4d5d.png",
+    "static/media/noReminders.png": "/static/media/noReminders.b2393374c19d937478e3.png",
+    "static/media/noUserDetailsCropped.png": "/static/media/noUserDetailsCropped.547364d7718786cc8633.png",
+    "static/media/noUserDetails.png": "/static/media/noUserDetails.187466242786ea5c6502.png",
+    "static/media/noBarGraphData.png": "/static/media/noBarGraphData.cccf32d8841770e339ea.png",
+    "static/media/noProgressCropped.png": "/static/media/noProgressCropped.77d78b2c2c67dbe7ddaf.png",
+    "static/media/noProgress.png": "/static/media/noProgress.99e8c808ac3f36eb4ccd.png",
+    "static/media/login.png": "/static/media/login.84e7120b8a02b6e82094.png",
+    "static/media/forget-m3.png": "/static/media/forget-m3.cdfff35dc662ee3f619b.png",
+    "index.html": "/index.html",
+    "main.c7a62355.css.map": "/static/css/main.c7a62355.css.map",
+    "main.daa3d320.js.map": "/static/js/main.daa3d320.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7a62355.css",
+    "static/js/main.daa3d320.js"
+  ]
+}
