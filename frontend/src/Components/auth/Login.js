@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Constants from "../../constants"
+import { quickDemoLogin } from "../../utils/demoAuth"
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -119,7 +120,25 @@ const Login = () => {
           </div>
 
           <button type="submit">Sign in</button>
-          {/* 
+
+          <div id="demo-login-container">
+            <div id="demo-login-label">Just exploring?</div>
+            <div id="demo-login-btns">
+              <button
+                type="button"
+                className="demo-btn"
+                onClick={() => quickDemoLogin("user", navigate)}>
+                View Project as User
+              </button>
+              <button
+                type="button"
+                className="demo-btn"
+                onClick={() => quickDemoLogin("caretaker", navigate)}>
+                View Project as Caretaker
+              </button>
+            </div>
+          </div>
+          {/*
           <div id="hr">OR</div>
 
           <div id="login-btns">

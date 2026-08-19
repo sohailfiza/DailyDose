@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import login_img from "../../assets/images/login.png";
 import { toast } from "react-toastify";
@@ -6,9 +6,16 @@ import { toast } from "react-toastify";
 const VerifyOTP = () => {
   const location = useLocation();
   const [otp, setOtp] = useState(new Array(6).fill(""));
-  // Retrieve the user data passed via state
-  const { formData, fetchUrl, email, flow, role } = location.state;
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!location.state) {
+      navigate("/register", { replace: true });
+    }
+  }, []);
+
+  // Retrieve the user data passed via state
+  const { formData, fetchUrl, email, flow, role } = location.state || {};
 
   const handleSubmit = (e) => {
     e.preventDefault();

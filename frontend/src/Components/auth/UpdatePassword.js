@@ -84,7 +84,7 @@ const UpdatePassword = () => {
 
           <div className="form-wrapper">
             <input
-              type="text"
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="New Password"

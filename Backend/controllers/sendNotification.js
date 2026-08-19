@@ -2,7 +2,7 @@ const sendNotification = async (body) => {
     try {
         const { title, description, userId, belongTo } = body
         console.log(body)
-        const url = "http://localhost:5000/api/notifications"
+        const url = `http://localhost:${process.env.PORT}/api/notifications`
         const response = await fetch(url, {
             method: "POST",
             headers: {

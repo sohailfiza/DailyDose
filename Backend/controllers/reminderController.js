@@ -96,10 +96,12 @@ export const getReminders = async (req, res) => {
 
         const dateStr = new Date().toISOString().split('T')[0]
         for (let i = 0; i < reminders.length; i++) {
-            const endDate = reminders[i].endDate.toISOString().split('T')[0]
-            if (endDate < dateStr) {
-                reminders[i].completed = true
-                reminders[i].save()
+            if (reminders[i].endDate) {
+                const endDate = reminders[i].endDate.toISOString().split('T')[0]
+                if (endDate < dateStr) {
+                    reminders[i].completed = true
+                    reminders[i].save()
+                }
             }
 
             if (!reminders[i].completedToday && !reminders[i].pushNotification) {

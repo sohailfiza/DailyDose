@@ -255,7 +255,7 @@ const Target = () => {
                         <div className="Progress-bar"></div>
                         <div className="end-date">
                           <strong>
-                            {moment().format("MMMM Do YYYY h:mm:ss a")}
+                            {goal.endDate ? moment(goal.endDate).format("MMMM Do YYYY") : "Ongoing"}
                           </strong>
                         </div>
                         <div className="dot">
@@ -326,7 +326,7 @@ const Target = () => {
                         <div className="Progress-bar"></div>
                         <div className="end-date">
                           <strong>
-                            {moment().format("MMMM Do YYYY h:mm:ss a")}
+                            {reminder.endDate ? moment(reminder.endDate).format("MMMM Do YYYY") : "Ongoing"}
                           </strong>
                         </div>
                         <div className="dot">

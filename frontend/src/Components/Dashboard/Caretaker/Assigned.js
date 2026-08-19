@@ -38,10 +38,10 @@ const Assigned = ({ assignedUserDetails }) => {
                       <p>{assignedUser.email}</p>
                     </div>
                     <div>
-                      {assignedUser.allergy ? assignedUser.allergy.map((allergy) => {
+                      {assignedUser.allergies ? assignedUser.allergies.map((allergy) => {
                         return (
 
-                          <p key={allergy}>{allergy || "--"}</p>
+                          <p key={allergy}>{allergy || "--"},</p>
                         )
                       }) : <p>--</p>}
                     </div>

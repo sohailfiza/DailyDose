@@ -4,6 +4,7 @@ import register_img from "../../assets/images/register-m2.png";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Constants from "../../constants";
+import { quickDemoLogin } from "../../utils/demoAuth";
 const validateEmail = (email) => {
   const re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -190,6 +191,24 @@ const Register = () => {
           </div>
 
           <button type="submit">Sign Up</button>
+
+          <div id="demo-login-container">
+            <div id="demo-login-label">Just exploring?</div>
+            <div id="demo-login-btns">
+              <button
+                type="button"
+                className="demo-btn"
+                onClick={() => quickDemoLogin("user", navigate)}>
+                View Project as User
+              </button>
+              <button
+                type="button"
+                className="demo-btn"
+                onClick={() => quickDemoLogin("caretaker", navigate)}>
+                View Project as Caretaker
+              </button>
+            </div>
+          </div>
 
           {/* <div id="hr">OR</div>
 

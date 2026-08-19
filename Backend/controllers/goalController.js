@@ -503,10 +503,12 @@ export const getMonthlyGoalProgress = async (req, res) => {
 
                 await goal.save();
 
-                const today = new Date().toISOString().split('T')[0];
-                const goalEndDate = new Date(end).toISOString().split('T')[0];
-                if (goalEndDate < today) {
-                    goal.completed = true;
+                if (goal.endDate) {
+                    const today = new Date().toISOString().split('T')[0];
+                    const goalEndDate = new Date(goal.endDate).toISOString().split('T')[0];
+                    if (goalEndDate < today) {
+                        goal.completed = true;
+                    }
                 }
 
                 await goal.save();
@@ -598,9 +600,11 @@ export const getDailyGoalProgress = async (req, res) => {
         const updatedGoals = await Promise.all(
             todaysGoals.map(async (goalData) => {
                 const goal = await GOAL.findOne({ uuid: goalData.uuid });
-                const goalEndDate = new Date(goal.endDate).toISOString().split("T")[0];
-                if (goalEndDate < today) {
-                    goal.completed = true;
+                if (goal.endDate) {
+                    const goalEndDate = new Date(goal.endDate).toISOString().split("T")[0];
+                    if (goalEndDate < today) {
+                        goal.completed = true;
+                    }
                 }
                 await goal.save();
                 return goal;
@@ -666,7 +670,7 @@ export const getDailyGoalProgress = async (req, res) => {
                     })
 
                     user.dailyQuoteSent = new Date()
-                    user.save()
+                    await user.save()
 
                     if (!sendNotificationResult) {
                         console.log("notification not sent when created goal", sendNotificationResult)
